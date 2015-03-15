@@ -40,7 +40,7 @@ module.exports = function (grunt) {
         watch: {
             scripts: {
                 files: ['src/**/*.js', 'test/**/*.js'],
-                tasks: ['eslint', 'babel', 'babel:test', 'karma']
+                tasks: ['test']
             }
         }
     });
@@ -52,4 +52,5 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
 
     grunt.registerTask('default', ['eslint', 'babel', 'babel:test', 'karma', 'uglify']);
+    grunt.registerTask('test', ['eslint', 'babel', 'babel:test', 'karma']);
 };

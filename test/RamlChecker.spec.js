@@ -1,4 +1,4 @@
-/*global require,describe,it,expect,RamlChecker*/
+/*global describe,it,expect,RamlChecker*/
 
 describe('RamlChecker', () => {
     describe('first', () => {
