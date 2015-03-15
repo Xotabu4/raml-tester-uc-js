@@ -1,0 +1,11 @@
+{
+  "ecmaFeatures": {
+    "classes": true,
+    "arrowFunctions": true,
+    "blockBindings": true
+  },
+  "rules": {
+    "quotes": "single",
+    "strict": "never"
+  }
+}

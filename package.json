@@ -1,0 +1,35 @@
+{
+  "name": "raml-tester-js",
+  "title": "Verify requests / responses against a RAML definition",
+  "description": "Verify requests / responses against a RAML definition",
+  "version": "0.0.1",
+  "private": false,
+  "author": {
+    "name": "Stefan Niederhauser <ich@nidi.guru>",
+    "company": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nidi3/raml-tester-js"
+  },
+  "dependencies": {
+    "raml-parser": "~0.8"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-clean": "~0.6.0",
+    "grunt-contrib-concat": "~0.5.1",
+    "grunt-bower-task": "~0.4.0",
+    "grunt-contrib-watch": "~0.6.1",
+    "karma-jasmine": "~0.3.5",
+    "karma-coverage": "~0.2.7",
+    "jasmine-core": "~2.2.0",
+    "grunt-babel": "~4.0.0",
+    "grunt-eslint": "~9.0.0",
+    "grunt-contrib-uglify": "~0.8.0",
+    "grunt-karma": "~0.10.1",
+    "phantomjs": "~1.9.16",
+    "karma-phantomjs-launcher": "~0.1.4",
+    "jasmine": "~2.2.1"
+  }
+}
