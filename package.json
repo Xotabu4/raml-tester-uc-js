@@ -13,7 +13,7 @@
     "url": "https://github.com/nidi3/raml-tester-js"
   },
   "scripts": {
-    "test": "./node_modules/.bin/grunt test"
+    "test": "grunt test"
   },
   "dependencies": {
     "raml-parser": "~0.8"
