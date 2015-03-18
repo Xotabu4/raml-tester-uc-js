@@ -2,22 +2,37 @@
 
 module.exports = function (grunt) {
     grunt.initConfig({
-        eslint: {
-            target: ['src/RamlChecker.js']
+        clean: {
+            clean: ['dist', 'dist-test']
         },
-
-        babel: {
+        eslint: {
+            target: ['src/**/*.js', 'test/**/*.js'],
             options: {
-                sourceMap: true
-            },
+                quiet: true
+            }
+        },
+        concat: {
+            dist: {
+                src: ['src/Values.js', 'src/VariableMatcher.js', 'src/RamlChecker.js'],
+                dest: 'dist/concat.js'
+            }
+        },
+        babel: {
             test: {
-                files: {
-                    'dist-test/RamlChecker.spec.js': 'test/RamlChecker.spec.js'
-                }
+                files: [{
+                    expand: true,
+                    cwd: 'test',
+                    src: ['**/*.js'],
+                    dest: 'dist-test',
+                    ext: '.spec.js'
+                }]
             },
             dist: {
+                options: {
+                    sourceMap: true
+                },
                 files: {
-                    'dist/app.js': 'src/RamlChecker.js'
+                    'dist/raml-tester.js': 'dist/concat.js'
                 }
             }
         },
@@ -30,7 +45,7 @@ module.exports = function (grunt) {
         karma: {
             unit: {
                 options: {
-                    files: ['dist/*.js', 'dist-test/*.js'],
+                    files: ['dist/raml-tester.js', 'dist-test/*.js'],
                     singleRun: true,
                     frameworks: ['jasmine'],
                     browsers: ['PhantomJS']
@@ -50,7 +65,9 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-eslint');
     grunt.loadNpmTasks('grunt-karma');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-contrib-concat');
 
-    grunt.registerTask('default', ['eslint', 'babel', 'babel:test', 'karma', 'uglify']);
-    grunt.registerTask('test', ['eslint', 'babel', 'babel:test', 'karma']);
+    grunt.registerTask('default', ['eslint', 'concat', 'babel', 'babel:test', 'karma', 'uglify']);
+    grunt.registerTask('test', ['eslint', 'concat', 'babel', 'babel:test', 'karma']);
 };
