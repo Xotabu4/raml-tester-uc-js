@@ -1,0 +1,27 @@
+{
+  "name": "raml-tester-uc-js",
+  "version": "0.0.1",
+  "homepage": "https://github.com/nidi3/raml-tester-uc-js",
+  "authors": [
+    "Stefan Niederhauser <ich@nidi.guru>"
+  ],
+  "description": "Usage case for raml-tester together with javascript",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.3.15",
+    "d3": "~3.5.5",
+    "nvd3": "~1.7.1",
+    "angularjs-nvd3-directives": "~0.0.7"
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.3.15"
+  }
+}
