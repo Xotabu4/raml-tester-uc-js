@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>raml-tester-uc-js</title>
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="../bower_components/d3/d3.js"></script>
+    <script src="../bower_components/nvd3/build/nv.d3.js"></script>
+    <script src="../bower_components/angularjs-nvd3-directives/dist/angularjs-nvd3-directives.js"></script>
+    <script src="backend.js"></script>
+    <script src="app.js"></script>
+    <script>
+        console.log('req');
+        var http = new XMLHttpRequest();
+        http.onreadystatechange = function () {
+            if (http.readyState === 4) {
+                console.log(http.status,http.responseText);
+            }
+        };
+        http.open('GET','http://localhost:8090/gold-price');
+        http.send();
+    </script>
+    <link rel="stylesheet" href="../bower_components/nvd3/build/nv.d3.css"/>
+</head>
+<body ng-app="app">
+Start proxy with 'grunt shell'.
+<div ng-controller="ctrl as ctrl">
+    <nvd3-line-chart data="ctrl.gold" width="200" height="200"></nvd3-line-chart>
+</div>
+</body>
+</html>

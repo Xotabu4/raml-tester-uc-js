@@ -10,27 +10,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/nidi3/raml-tester-js"
-  },
-  "dependencies": {
-    "angular": "~1.3.15"
+    "url": "https://github.com/nidi3/raml-tester-uc-js"
   },
   "devDependencies": {
+    "bower": "~1.3.12",
     "grunt": "~0.4.5",
-    "grunt-contrib-clean": "~0.6.0",
-    "grunt-contrib-concat": "~0.5.1",
     "grunt-bower-task": "~0.4.0",
-    "grunt-contrib-watch": "~0.6.1",
-    "karma-jasmine": "~0.3.5",
-    "karma-coverage": "~0.2.7",
-    "jasmine-core": "~2.2.0",
-    "grunt-babel": "~4.0.0",
-    "grunt-eslint": "~9.0.0",
-    "grunt-contrib-uglify": "~0.8.0",
     "grunt-karma": "~0.10.1",
-    "phantomjs": "~1.9.16",
-    "karma-phantomjs-launcher": "~0.1.4",
+    "grunt-shell": "~1.1.2",
     "jasmine": "~2.2.1",
-    "babel": "~4.7.12"
+    "jasmine-core": "~2.2.0",
+    "karma-chrome-launcher": "^0.1.7",
+    "karma-firefox-launcher": "^0.1.4",
+    "karma-jasmine": "^0.3.5",
+    "karma-phantomjs-launcher": "~0.1.4",
+    "karma-safari-launcher": "^0.1.1",
+    "phantomjs": "~1.9.16"
   }
 }
